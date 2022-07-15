@@ -3528,7 +3528,7 @@
 
 // var digitSum = function(s, k) {
 //     if (s.length <= k) {
-//         console.log(s);
+//         // console.log(s);
 //         return s
 //     }else {
 //         const arr = s.split('')
@@ -3548,9 +3548,80 @@
 //             }
 //         }
 //         return digitSum(str, k)
+//         // digitSum(str, k)
 //     }
 // };
 
 // digitSum('11111222223', 3)
 // digitSum('00000000', 3)
+
+// var kthDistinct = function(arr, k) {
+//     const obj = {}
+//     for (let i = 0; i < arr.length; i++) {
+//         if (obj[arr[i]]) {
+//             obj[arr[i]] = obj[arr[i]] + 1
+//         } else {
+//             obj[arr[i]] = 1
+//         }
+//     }
+//     let l = 0
+//     for (const key in obj) {
+//         if (obj[key] === 1) {
+//             ++l
+//             if (l === k) {
+//                 console.log(key)
+//                 return key
+//             } 
+            
+//         }
+//     }
+//     console.log('')
+//     return ''
+// };
+// kthDistinct(["d","b","c","b","c","a"], 2)
+// kthDistinct(["aaa","aa","a"], 1)
+// kthDistinct(["a","b","a"], 3)
+
+// var sumZero = function(n) {
+//     if (n === 1) return [0]
+//     const arr = []
+//     let l = 1
+//     for (let i = 0; i < n; i++) {
+//         if (i % 2 === 0) {
+//             arr.push(l)
+//         } else {
+//             arr.push(-l)
+//             l++
+//         }
+//     }
+//     if (n % 2 !== 0) {
+//         arr[arr.length - 1] = 0
+//     }
+//     console.log(arr);
+//     return arr
+// };
+// sumZero(5)
+// sumZero(3)
+// sumZero(10)
+
+// var firstUniqChar = function(s) {
+//     if (!s.length) return ' '
+//     const obj = {}
+//     const arr = s.split('')
+//     for (let i = 0; i < s.length; i++) {
+//         if (obj[arr[i]]) {
+//             obj[arr[i]] = obj[arr[i]] + 1
+//         } else {
+//             obj[arr[i]] = 1
+//         }
+//     }
+//     for (const key in obj) {
+//         if (obj[key] === 1) {
+//             console.log(key);
+//             return key
+//         }
+//     }
+//     return ' '
+// };
+// firstUniqChar('abaccdeff')
 
