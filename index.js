@@ -3490,3 +3490,67 @@
 //     { id: '1003', date_at: '2022-06-03' }
 // ]
 // dataFun(d)
+
+
+// var massage = function(nums) {
+//     if (!nums.length) return 0
+//     let dp0 = 0 
+//     let dp1 = nums[0] 
+//     for (let i = 1; i < nums.length; i++) {
+//         let r = dp0 + nums[i]
+//         let c = Math.max(dp0, dp1)
+//         dp0 = c
+//         dp1 = r
+//     }
+//     console.log(Math.max(dp0, dp1));
+//     return Math.max(dp0, dp1)
+// };
+// massage([1,2,3,1]) // 4
+// massage([2,7,9,3,1]) // 12
+// massage([2,1,4,5,3,1,1,3]) // 12
+
+// var twoSum = function(nums, target) {
+//     let l = 0
+//     let r = nums.length - 1
+//     while (l < r) {
+//         if (nums[r] + nums[l] > target) {
+//             r--
+//         }else if (nums[r] + nums[l] < target) {
+//             l++
+//         } else {
+//             console.log(r,[nums[r], nums[l]]);
+//             return [nums[r], nums[l]]
+//         }
+//     }
+// };
+// twoSum([2,7,11,15], 9)
+// twoSum([10,26,30,31,47,60], 40)
+
+// var digitSum = function(s, k) {
+//     if (s.length <= k) {
+//         console.log(s);
+//         return s
+//     }else {
+//         const arr = s.split('')
+//         let l = 0
+//         let res = 0
+//         let str = ''
+//         let b = Math.floor(arr.length / k)
+//         let toB = 0
+//         for (let i = 0; i < arr.length; i++) {
+//             ++l
+//             res = res + Number(arr[i])
+//             if (l === k || (toB === b && arr.length - 1 === i)) {
+//                 str = str + String(res)
+//                 l = 0
+//                 res = 0
+//                 ++toB
+//             }
+//         }
+//         return digitSum(str, k)
+//     }
+// };
+
+// digitSum('11111222223', 3)
+// digitSum('00000000', 3)
+
